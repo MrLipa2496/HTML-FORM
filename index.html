@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="./assets/js/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="form-wrapper">
+      <h1 class="title">Contact form</h1>
+      <p class="title-caption">
+        Please fill in your information and we'll be sending your order
+      </p>
+      <form class="reg-form" id="contactForm">
+        <div class="form-row">
+          <label class="form-label">
+            <span class="label-caption">Your name</span>
+            <div class="input-group">
+              <input
+                class="form-input"
+                type="text"
+                name="user-name"
+                placeholder="first name"
+                minlength="2"
+                maxlength="32"
+                pattern="[A-Z][a-z]*"
+                required
+                autofocus
+              />
+              <input
+                class="form-input"
+                type="text"
+                name="user-surname"
+                placeholder="last name"
+                minlength="2"
+                maxlength="32"
+                pattern="[A-Z][a-z]*"
+                required
+              />
+            </div>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">
+            <span class="label-caption">Your email</span>
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              placeholder="your_mail@mail.com"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">
+            <span class="label-caption">Phone *</span>
+            <div class="input-group">
+              <input
+                class="form-input"
+                type="tel"
+                name="user-phone1"
+                pattern="\d{3}"
+                placeholder="000"
+                required
+              />
+              <input
+                class="form-input"
+                type="tel"
+                name="user-phone2"
+                pattern="\d{3}"
+                placeholder="000"
+                required
+              />
+              <input
+                class="form-input"
+                type="tel"
+                name="user-phone3"
+                pattern="\d{4}"
+                placeholder="0000"
+                required
+              />
+            </div>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">
+            <span class="label-caption">Message subject *</span>
+            <select class="form-input" name="products">
+              <option value="other">Other</option>
+              <option value="computer">Computer</option>
+              <option value="refrigerator">Refrigerator</option>
+              <option value="phone">Phone</option>
+              <option value="vacuum-cleaner">Vacuum cleaner</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">
+            <span class="label-caption">Message *</span>
+            <textarea
+              class="message-box"
+              rows="10"
+              cols="45"
+              name="message"
+              required
+            ></textarea>
+          </label>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit form</button>
+      </form>
+    </main>
+  </body>
+</html>
